@@ -37,7 +37,7 @@ Langfuse already documents an end-to-end regression-testing path, Prompt CI/CD, 
 evaluators, regression thresholds, and the official GitHub Action. This repository packages that path as a compact
 artifact pinned to:
 
-- `@langfuse/client@5.9.1`
+- `@langfuse/client@5.10.0`
 - `langfuse/experiment-action@v1.0.8`
 
 The example calls a candidate endpoint for every dataset item, records an item-level pass/fail score, calculates average
