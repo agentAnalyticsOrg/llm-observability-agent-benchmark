@@ -27,5 +27,5 @@ jobs:
           experiment_path: prompt-regression-gate.ts
           dataset_name: prompt-regression-set
           dataset_version: "2026-08-11T00:00:00Z"
-          js_sdk_version: 5.9.1
+          js_sdk_version: 5.10.0
           github_token: ${{ github.token }}
