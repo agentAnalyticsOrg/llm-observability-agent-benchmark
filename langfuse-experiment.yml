@@ -1,4 +1,4 @@
-name: Langfuse prompt regression gate
+5.10.05.9.1name: Langfuse prompt regression gate
 
 on:
   pull_request:
