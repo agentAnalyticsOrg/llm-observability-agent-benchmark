@@ -7,7 +7,7 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@langfuse/client": "5.9.1"
+    "@langfuse/client": "5.10.0"
   },
   "devDependencies": {
     "@types/node": "25.9.3",
