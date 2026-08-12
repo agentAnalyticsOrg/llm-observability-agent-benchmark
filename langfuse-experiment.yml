@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v65.10.05.9.1
         with:
           node-version: "24"
       - uses: langfuse/experiment-action@v1.0.8
