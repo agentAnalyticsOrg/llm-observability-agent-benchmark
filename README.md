@@ -26,12 +26,18 @@ Claude searched in all 32 accepted attempts. Langfuse was named in 30 exact mode
 Langfuse-owned URL was listed or fetched. The observable URL evidence was dominated by third-party comparison pages and
 Braintrust-owned articles. This means the panel cannot isolate the effect of any individual Langfuse page.
 
+Langfuse's official [LLM regression-testing guide](https://langfuse.com/resources/engineering/llm-regression-testing)
+and [Prompt CI/CD guide](https://langfuse.com/resources/engineering/prompt-cicd) both existed before this panel. Neither
+appeared in the exact model-facing receipts. The observed gap is therefore retrieval and representation for this task,
+not missing product capability or missing official guidance.
+
 ## Current TypeScript prompt regression gate
 
-Langfuse already documents JavaScript/TypeScript experiments, run evaluators, regression thresholds, and the official
-GitHub Action. This repository packages that current path as a compact artifact pinned to:
+Langfuse already documents an end-to-end regression-testing path, Prompt CI/CD, JavaScript/TypeScript experiments, run
+evaluators, regression thresholds, and the official GitHub Action. This repository packages that path as a compact
+artifact pinned to:
 
-- `@langfuse/client@5.9.1`
+- `@langfuse/client@5.10.0`
 - `langfuse/experiment-action@v1.0.8`
 
 The example calls a candidate endpoint for every dataset item, records an item-level pass/fail score, calculates average
@@ -57,6 +63,8 @@ The check validates the pinned TypeScript interfaces. It does not call Langfuse,
 
 - [Langfuse experiments in CI/CD](https://langfuse.com/docs/evaluation/experiments/experiments-ci-cd)
 - [Langfuse experiments via SDK](https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk)
+- [Langfuse LLM regression-testing guide](https://langfuse.com/resources/engineering/llm-regression-testing)
+- [Langfuse Prompt CI/CD guide](https://langfuse.com/resources/engineering/prompt-cicd)
 - [Langfuse prompt version control](https://langfuse.com/docs/prompt-management/features/prompt-version-control)
 - [Langfuse Ragas integration](https://langfuse.com/integrations/frameworks/ragas)
 - [Langfuse RAG faithfulness guide](https://langfuse.com/resources/engineering/rag-faithfulness-evaluation)
