@@ -1,4 +1,4 @@
-5.10.05.9.1name: Langfuse prompt regression gate
+name: Langfuse prompt regression gate
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v65.10.05.9.1
+      - uses: actions/setup-node@v6
         with:
           node-version: "24"
       - uses: langfuse/experiment-action@v1.0.8
