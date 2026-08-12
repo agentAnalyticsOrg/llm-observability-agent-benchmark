@@ -3,7 +3,7 @@
   "treatment_id": "langfuse-task-evidence-v1",
   "title": "LLM observability and evaluation for TypeScript: task-level evidence",
   "canonical_url": "https://agentanalytics.org/research/llm-observability-typescript-task-evidence",
-  "generated_at": "2026-08-12T06:44:03.206Z",
+  "generated_at": "2026-08-12T13:32:42.062Z",
   "panel_date": "2026-08-11",
   "baseline": {
     "run_id": "2026-08-11T18-33-21-216Z",
@@ -133,7 +133,7 @@
     ]
   },
   "current_typescript_artifact": {
-    "package": "@langfuse/client@5.10.0",
+    "package": "@langfuse/client@5.9.1",
     "github_action": "langfuse/experiment-action@v1.0.8",
     "purpose": "A pinned, type-checked prompt regression gate that calls a candidate endpoint, scores dataset outputs, and fails CI below a threshold.",
     "repository": "https://github.com/agentAnalyticsOrg/llm-observability-agent-benchmark"
@@ -151,155 +151,6 @@
     "https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk",
     "https://langfuse.com/resources/engineering/llm-regression-testing",
     "https://langfuse.com/resources/engineering/prompt-cicd",
-    "https://langfuse.com/docs/prompt-management/features/prompt-version-control",
-    "https://langfuse.com/integrations/frameworks/ragas",
-    "https://langfuse.com/resources/engineering/rag-faithfulness-evaluation",
-    "https://github.com/langfuse/experiment-action"
-  ],
-  "source_hashes": {
-    "baseline_results_sha256": "25e9f61d12542dc4a7a860747412ffd2c0bebc52c089ed69e1466fd547f82b6f",
-    "exact_receipt_analysis_sha256": "8c1a9b020b393fef24261edf3e4ced23892eb1ad74ead1dd33825a15881dafaf",
-    "surface_manifest_sha256": "179cd784031219b89b646c1cd972f5a1c2e9af0634d0d0fa487ca41f94abd947"
-  }
-}
-{
-  "schema_version": "agentanalytics.public_research.v2",
-  "treatment_id": "langfuse-task-evidence-v1",
-  "title": "LLM observability and evaluation for TypeScript: task-level evidence",
-  "canonical_url": "https://agentanalytics.org/research/llm-observability-typescript-task-evidence",
-  "generated_at": "2026-08-12T05:33:11.885Z",
-  "panel_date": "2026-08-11",
-  "baseline": {
-    "run_id": "2026-08-11T18-33-21-216Z",
-    "run_uri": "data/experiments/agent-decision-pipeline/llm-observability-platforms-2026-08-11T18-33-21-216Z",
-    "intent": "category_evaluation",
-    "prompt_version": "decision-pipeline-v1-claude-explicit-category-research",
-    "agent": {
-      "id": "claude",
-      "modelId": "claude-code-cli",
-      "modelName": "Claude Code",
-      "modelProvider": "anthropic",
-      "resolvedModelId": "claude-opus-4-7",
-      "reasoningEffort": "low",
-      "authMode": "api",
-      "command": "claude",
-      "version": "2.1.148 (Claude Code)"
-    },
-    "attempted_records": 34,
-    "accepted_attempts": 32,
-    "preserved_excluded_attempts": 2,
-    "search_observed_attempts": 32,
-    "selection_counts": {
-      "langfuse": 17,
-      "braintrust": 7,
-      "outside-tracked-observability-platform": 8
-    },
-    "task_results": [
-      {
-        "task_id": "platform-tracing",
-        "task_name": "Add an LLM tracing platform",
-        "attempts": 8,
-        "selection_counts": {
-          "langfuse": 8,
-          "braintrust": 0,
-          "outside-tracked-observability-platform": 0
-        }
-      },
-      {
-        "task_id": "platform-rag-evals",
-        "task_name": "Add a RAG evaluation platform",
-        "attempts": 8,
-        "selection_counts": {
-          "langfuse": 1,
-          "braintrust": 3,
-          "outside-tracked-observability-platform": 4
-        }
-      },
-      {
-        "task_id": "platform-prompt-gates",
-        "task_name": "Add prompt comparison and release gates",
-        "attempts": 8,
-        "selection_counts": {
-          "langfuse": 0,
-          "braintrust": 4,
-          "outside-tracked-observability-platform": 4
-        }
-      },
-      {
-        "task_id": "platform-production-monitoring",
-        "task_name": "Add production LLM monitoring",
-        "attempts": 8,
-        "selection_counts": {
-          "langfuse": 8,
-          "braintrust": 0,
-          "outside-tracked-observability-platform": 0
-        }
-      }
-    ],
-    "exact_search_receipts": {
-      "langfuse_mentioned_attempts": 30,
-      "langfuse_owned_url_listed_attempts": 0,
-      "langfuse_owned_page_fetched_attempts": 0,
-      "any_page_fetch_attempts": 0
-    },
-    "retrieval_condition": "Claude Code was explicitly required to research current providers before choosing. No provider candidate list was supplied."
-  },
-  "current_official_surface": {
-    "snapshot_uri": "data/doc-snapshots/langfuse/2026-08-11T18-34-24-652Z",
-    "captured_at": "2026-08-11T18:34:24.654Z",
-    "pages": [
-      {
-        "url": "https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk",
-        "status": 200,
-        "title": "Experiments via SDK - Langfuse"
-      },
-      {
-        "url": "https://langfuse.com/docs/evaluation/experiments/experiments-ci-cd",
-        "status": 200,
-        "title": "Experiments in CI/CD - Langfuse"
-      },
-      {
-        "url": "https://langfuse.com/docs/prompt-management/features/prompt-version-control",
-        "status": 200,
-        "title": "Version Control - Langfuse"
-      },
-      {
-        "url": "https://langfuse.com/integrations/frameworks/ragas",
-        "status": 200,
-        "title": "Run Ragas evaluations on Langfuse experiments and traces - Langfuse"
-      },
-      {
-        "url": "https://langfuse.com/resources/engineering/rag-faithfulness-evaluation",
-        "status": 200,
-        "title": "How to evaluate RAG faithfulness with LLM-as-a-judge - Langfuse"
-      }
-    ],
-    "verified_capabilities": [
-      "JavaScript/TypeScript experiments via SDK",
-      "RegressionError thresholds for CI gates",
-      "langfuse/experiment-action for GitHub Actions",
-      "prompt version control",
-      "Ragas evaluators",
-      "RAG faithfulness evaluation guidance"
-    ]
-  },
-  "current_typescript_artifact": {
-    "package": "@langfuse/client@5.9.1",
-    "github_action": "langfuse/experiment-action@v1.0.8",
-    "purpose": "A pinned, type-checked prompt regression gate that calls a candidate endpoint, scores dataset outputs, and fails CI below a threshold.",
-    "repository": "https://github.com/agentAnalyticsOrg/llm-observability-agent-benchmark"
-  },
-  "limitations": [
-    "This is observed behavior from one dated Claude Code category-evaluation panel, not a universal product-quality ranking.",
-    "The panel required public research and does not estimate ordinary no-search provider share.",
-    "A provider name in model-facing search evidence is not the same as an owned URL being listed, fetched, or attended to.",
-    "No page fetches occurred in the accepted baseline, so the panel cannot isolate the effect of individual page content.",
-    "The type check validates the pinned TypeScript interface but does not call Langfuse, a candidate endpoint, or a live model.",
-    "Publication, crawl submission, and URL listing do not establish exposure or causal selection lift."
-  ],
-  "primary_sources": [
-    "https://langfuse.com/docs/evaluation/experiments/experiments-ci-cd",
-    "https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk",
     "https://langfuse.com/docs/prompt-management/features/prompt-version-control",
     "https://langfuse.com/integrations/frameworks/ragas",
     "https://langfuse.com/resources/engineering/rag-faithfulness-evaluation",
