@@ -1,7 +1,7 @@
 {
   "schema_version": "agentanalytics.public_research.v2",
-  "treatment_id": "langfuse-task-evidence-v1",
-  "title": "LLM observability and evaluation for TypeScript: task-level evidence",
+  "treatment_id": "langfuse-task-evidence-v2-query-matched",
+  "title": "Best LLM evaluation platforms for TypeScript: task-level evidence",
   "canonical_url": "https://agentanalytics.org/research/llm-observability-typescript-task-evidence",
   "generated_at": "2026-08-12T13:46:41.757Z",
   "panel_date": "2026-08-11",
@@ -135,9 +135,21 @@
   "current_typescript_artifact": {
     "package": "@langfuse/client@5.10.0",
     "github_action": "langfuse/experiment-action@v1.0.8",
-    "purpose": "A pinned, type-checked prompt regression gate that calls a candidate endpoint, scores dataset outputs, and fails CI below a threshold.",
+    "purpose": "Pinned, type-checked prompt-regression and RAG-quality experiments that score candidate outputs and fail CI below declared thresholds.",
     "repository": "https://github.com/agentAnalyticsOrg/llm-observability-agent-benchmark"
   },
+  "query_matched_surfaces": [
+    {
+      "task": "prompt regression testing and CI/CD release gates",
+      "url": "https://agentanalytics.org/research/langfuse-typescript-prompt-regression-ci-cd",
+      "artifact": "https://github.com/agentAnalyticsOrg/llm-observability-agent-benchmark/blob/main/prompt-regression-gate.ts"
+    },
+    {
+      "task": "RAG evaluation with retrieval and answer regression tests",
+      "url": "https://agentanalytics.org/research/langfuse-rag-evaluation-typescript",
+      "artifact": "https://github.com/agentAnalyticsOrg/llm-observability-agent-benchmark/blob/main/rag-evaluation.ts"
+    }
+  ],
   "limitations": [
     "This is observed behavior from one dated Claude Code category-evaluation panel, not a universal product-quality ranking.",
     "The panel required public research and does not estimate ordinary no-search provider share.",
