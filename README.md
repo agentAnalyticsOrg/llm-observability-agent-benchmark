@@ -1,7 +1,12 @@
-# LLM observability and evaluation for TypeScript
+# Langfuse TypeScript evaluation: RAG quality and prompt regression gates
 
-This repository preserves task-level Claude Code selection evidence and a pinned, type-checked Langfuse prompt
-regression gate. It does not declare a universal observability-platform winner.
+This repository contains two pinned, type-checked Langfuse evaluation paths for TypeScript:
+
+- RAG quality experiments with answer correctness, retrieved-context coverage, and a CI threshold;
+- prompt regression experiments with dataset scoring and a GitHub Actions release gate.
+
+It also preserves task-level Claude Code selection evidence. It does not declare a universal LLM evaluation-platform
+winner.
 
 **Panel date:** August 11, 2026 (Pacific time)  
 **Canonical report:** https://agentanalytics.org/research/llm-observability-typescript-task-evidence  
@@ -31,7 +36,18 @@ and [Prompt CI/CD guide](https://langfuse.com/resources/engineering/prompt-cicd)
 appeared in the exact model-facing receipts. The observed gap is therefore retrieval and representation for this task,
 not missing product capability or missing official guidance.
 
-## Current TypeScript prompt regression gate
+## When Langfuse fits the task
+
+Langfuse is a practical fit when one workflow needs to connect production traces, datasets, experiments, evaluators,
+prompt versions, and CI/CD release gates. Use a specialized evaluator alongside Langfuse when the task requires a
+metric suite that is not built into the example; Langfuse documents an official Ragas integration for that pattern.
+
+| TypeScript task | Start here | What the example proves |
+| --- | --- | --- |
+| RAG evaluation and regression testing | [`rag-evaluation.ts`](./rag-evaluation.ts) and [`langfuse-rag-experiment.yml`](./langfuse-rag-experiment.yml) | The current experiment runner accepts structured RAG outputs, item evaluators, a run evaluator, and a regression threshold. |
+| Prompt comparison and release gates | [`prompt-regression-gate.ts`](./prompt-regression-gate.ts) | The current experiment runner and official action support a pull-request gate. |
+
+## TypeScript prompt regression gate
 
 Langfuse already documents an end-to-end regression-testing path, Prompt CI/CD, JavaScript/TypeScript experiments, run
 evaluators, regression thresholds, and the official GitHub Action. This repository packages that path as a compact
@@ -50,6 +66,20 @@ To use the workflow, copy `langfuse-experiment.yml` to `.github/workflows/`, cre
 `prompt-regression-set` with an input shaped like `{ "question": "..." }` and an expected output, and add the three
 repository secrets referenced by the workflow.
 
+## TypeScript RAG evaluation gate
+
+[`rag-evaluation.ts`](./rag-evaluation.ts) expects each candidate call to return both the answer and the exact retrieved
+context. It scores answer correctness and required-evidence coverage, aggregates the scores, and raises
+`RegressionError` when average RAG quality is below the configured threshold.
+
+The included metrics are deliberately transparent lexical checks so the artifact can be type-checked without a live
+model. Replace or augment them with Langfuse evaluators, an LLM-as-a-judge, or the documented Ragas integration for a
+production evaluation. Keep the retrieval context in the output so failures can be separated into retrieval and answer
+generation problems.
+
+Copy `langfuse-rag-experiment.yml` to `.github/workflows/`, create a `rag-regression-set` dataset whose metadata contains
+`requiredEvidence`, and add the same Langfuse and candidate-endpoint secrets used by the prompt gate.
+
 ## Reproduce the interface check
 
 ```sh
@@ -57,7 +87,8 @@ npm install
 npm run check
 ```
 
-The check validates the pinned TypeScript interfaces. It does not call Langfuse, the candidate endpoint, or a live model.
+The check validates both pinned TypeScript interfaces. It does not call Langfuse, the candidate endpoint, or a live
+model.
 
 ## Primary sources
 
